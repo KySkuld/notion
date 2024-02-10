@@ -127,9 +127,10 @@ function clock() {
 // adds zero infront of single digit number
 function zeros(num) {
     if (num < 10) {
-        num = '0' + num
-    };
-    return num;
+        return '0' + num;
+    } else {
+        return num;
+    }
 }
 
 function dateTime() {
@@ -141,11 +142,11 @@ function dateTime() {
 var hrs = (new Date()).getHours();
 var greet;
 if (hrs < 12)
-    greet = 'Bonjour Morgane';
+    greet = 'Bonjour';
 else if (hrs >= 12 && hrs <= 17)
-    greet = 'Bon après-midi Morgane';
+    greet = 'Bon après-midi';
 else if (hrs >= 17 && hrs <= 24)
-    greet = 'Bonsoir Morgane';
+    greet = 'Bonsoir';
 document.getElementById('greet').innerHTML = greet;
 
 dateTime();
